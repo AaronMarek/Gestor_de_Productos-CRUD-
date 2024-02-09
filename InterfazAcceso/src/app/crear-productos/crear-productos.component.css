@@ -1,0 +1,12 @@
+.mi-clase-de-margen {
+  margin-top: 10px; /* Ajusta el valor según tus necesidades */
+  margin-bottom: 10px; /* Ajusta el valor según tus necesidades */
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+}

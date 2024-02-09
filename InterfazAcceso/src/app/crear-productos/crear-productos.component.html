@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card p-5 mt-4">
+    <form #ProductosForm="ngForm" (ngSubmit)="guardarProductos(ProductosForm)">
+      <label class="mi-clase-de-margen">
+        Información básica de los productos
+      </label>
+
+      <mat-form-field class="Nombre_Producto">
+        <mat-label>Nombre</mat-label>
+        <input matInput name="ProductosNombre" [(ngModel)]="productos.ProductosNombre" required>
+        <div *ngIf="camposIncompletos && !productos.ProductosNombre" class="error-message">Nombre es obligatorio</div>
+      </mat-form-field>
+
+      <mat-form-field class="Categoria_Producto">
+        <mat-label>Categoría</mat-label>
+        <input matInput name="ProductosCategoria" [(ngModel)]="productos.ProductosCategoria" required>
+        <div *ngIf="camposIncompletos && !productos.ProductosCategoria" class="error-message">Categoría es obligatoria</div>
+      </mat-form-field>
+
+      <mat-form-field class="Cantidad_Producto">
+        <mat-label>Cantidad</mat-label>
+        <input matInput name="ProductosCantidad" [(ngModel)]="productos.ProductosCantidad" required>
+        <div *ngIf="camposIncompletos && !productos.ProductosCantidad" class="error-message">Cantidad es obligatoria</div>
+      </mat-form-field>
+
+      <mat-form-field class="Precio_Producto">
+        <mat-label>Precio</mat-label>
+        <input matInput name="ProductosPrecio" [(ngModel)]="productos.ProductosPrecio" required>
+        <div *ngIf="camposIncompletos && !productos.ProductosPrecio" class="error-message">Precio es obligatorio</div>
+      </mat-form-field>
+
+      <button mat-button color="accent">Guardar</button>
+    </form>
+
+  </div>
+</div>
